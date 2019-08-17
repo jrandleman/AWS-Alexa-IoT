@@ -1,4 +1,4 @@
-// Author: Jordan Randleman - Alexa-Automated Programming Resume Pitch
+// Author: Jordan Randleman - Alexa-Automated Programming Resume (as of 2019-08-08) Pitch
 
 /******************************************************************************
 * GLOBAL RESUME
