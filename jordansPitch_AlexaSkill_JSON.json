@@ -1,0 +1,924 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "jordans pitch",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ContactIntent",
+                    "slots": [
+                        {
+                            "name": "infoSynonym",
+                            "type": "infoSynonyms"
+                        },
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms"
+                        }
+                    ],
+                    "samples": [
+                        "{requestSynonym} contact",
+                        "contact {infoSynonym}",
+                        "{requestSynonym} contact {infoSynonym}"
+                    ]
+                },
+                {
+                    "name": "EducationIntent",
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms"
+                        },
+                        {
+                            "name": "infoSynonym",
+                            "type": "infoSynonyms"
+                        },
+                        {
+                            "name": "schoolSynonym",
+                            "type": "schoolSynonyms",
+                            "samples": [
+                                "{requestSynonym} {schoolSynonym}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{requestSynonym} {schoolSynonym} history",
+                        "{schoolSynonym} history",
+                        "{schoolSynonym} {infoSynonym}",
+                        "{requestSynonym} {schoolSynonym}",
+                        "{requestSynonym} {schoolSynonym} {infoSynonym}"
+                    ]
+                },
+                {
+                    "name": "SkillsIntent",
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms"
+                        },
+                        {
+                            "name": "skillSynonym",
+                            "type": "skillSynonyms",
+                            "samples": [
+                                "{requestSynonym} {skillSynonym}"
+                            ]
+                        },
+                        {
+                            "name": "infoSynonym",
+                            "type": "infoSynonyms"
+                        }
+                    ],
+                    "samples": [
+                        "{requestSynonym} {skillSynonym} {infoSynonym}",
+                        "{skillSynonym} {infoSynonym}",
+                        "{skillSynonym}",
+                        "{requestSynonym} {skillSynonym}"
+                    ]
+                },
+                {
+                    "name": "WorkExperienceIntent",
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms"
+                        },
+                        {
+                            "name": "workSynonym",
+                            "type": "workSynonyms",
+                            "samples": [
+                                "{workSynonym}",
+                                "{requestSynonym} {workSynonym}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{workSynonym}",
+                        "{requestSynonym} {workSynonym}"
+                    ]
+                },
+                {
+                    "name": "ExtraCurricularActivitiesIntent",
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms"
+                        },
+                        {
+                            "name": "extraCurricSynonym",
+                            "type": "extraCurricSynonyms",
+                            "samples": [
+                                "{requestSynonym} {extraCurricSynonym}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{extraCurricSynonym}",
+                        "{requestSynonym} {extraCurricSynonym}"
+                    ]
+                },
+                {
+                    "name": "HighSchoolOrCollegeEducationIntent",
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms"
+                        },
+                        {
+                            "name": "educationType",
+                            "type": "educationTypes",
+                            "samples": [
+                                "{educationType} {schoolSynonym}"
+                            ]
+                        },
+                        {
+                            "name": "schoolSynonym",
+                            "type": "schoolSynonyms"
+                        },
+                        {
+                            "name": "infoSynonym",
+                            "type": "infoSynonyms"
+                        }
+                    ],
+                    "samples": [
+                        "{educationType} {infoSynonym}",
+                        " {educationType} {schoolSynonym} {infoSynonym}",
+                        "{requestSynonym} {educationType} {schoolSynonym} {infoSynonym}",
+                        "{educationType} {schoolSynonym}",
+                        "{requestSynonym} {educationType} {schoolSynonym}"
+                    ]
+                },
+                {
+                    "name": "CodingOrSchoolProjectsIntent",
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms"
+                        },
+                        {
+                            "name": "projectType",
+                            "type": "projectTypes",
+                            "samples": [
+                                "{requestSynonym} {projectType} {extraCurricSynonym}",
+                                "{projectType} {extraCurricSynonym}",
+                                "{programmingType} {projectType} {extraCurricSynonym}",
+                                "{requestSynonym} {programmingType} {projectType} {extraCurricSynonym}"
+                            ]
+                        },
+                        {
+                            "name": "extraCurricSynonym",
+                            "type": "extraCurricSynonyms",
+                            "samples": [
+                                "{requestSynonym} {projectType} {extraCurricSynonym}",
+                                "{projectType} {extraCurricSynonym}",
+                                "{programmingType} {projectType} {extraCurricSynonym}",
+                                "{requestSynonym} {programmingType} {projectType} {extraCurricSynonym}"
+                            ]
+                        },
+                        {
+                            "name": "programmingType",
+                            "type": "programmingTypes"
+                        }
+                    ],
+                    "samples": [
+                        "{requestSynonym} {programmingType} {projectType} {extraCurricSynonym}",
+                        "{programmingType} {projectType} {extraCurricSynonym}",
+                        "{projectType} {extraCurricSynonym}",
+                        "{requestSynonym} {projectType} {extraCurricSynonym}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "infoSynonyms",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "information"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "info"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "requestSynonyms",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "show me"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pitch me on your"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "talk to me about"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tell me about"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "talk to me about your"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "talk about your"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pitch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pitch me your"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pitch your"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "show"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tell me about your"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tell your"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tell me your"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "give your"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "give me your"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "show your"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "show me your"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "schoolSynonyms",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "grades"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "academics"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "schooling"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "education"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "educationTypes",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "college"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "university"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "senior high school"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "high school"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "skillSynonyms",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "personal skillsets"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "personal skillset"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "personal skills"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "skillsets"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "skillset"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "skills"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "workSynonyms",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "employment history"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "employment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jobs"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "job history"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "work"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "time interning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "time working"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "internship experiences"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "experience interning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "internship history"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "interning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "internship"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "work history"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "work experience"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "extraCurricSynonyms",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "project"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "extra curricular projects"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "extra curricular activities"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "personal projects"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "projects"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "activities"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "extra curriculars"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "projectTypes",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "software development"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "software"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "programming"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "senior high school"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "high school"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "coding"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "programmingTypes",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "cpp"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "js"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "s v g"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "svg"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "c s s"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "css"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "h t m l"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "html"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "python"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "javascript"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "j s"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "c plus plus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "c++"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "c"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "ContactIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "infoSynonym",
+                            "type": "infoSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "HighSchoolOrCollegeEducationIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "educationType",
+                            "type": "educationTypes",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1203458382995.1278901299472"
+                            }
+                        },
+                        {
+                            "name": "schoolSynonym",
+                            "type": "schoolSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "infoSynonym",
+                            "type": "infoSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "EducationIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "infoSynonym",
+                            "type": "infoSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "schoolSynonym",
+                            "type": "schoolSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.210985170679.120642935592"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SkillsIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "skillSynonym",
+                            "type": "skillSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.22023506884.1558306953628"
+                            }
+                        },
+                        {
+                            "name": "infoSynonym",
+                            "type": "infoSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "WorkExperienceIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "workSynonym",
+                            "type": "workSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1304469552021.265978496322"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ExtraCurricularActivitiesIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "extraCurricSynonym",
+                            "type": "extraCurricSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1085304012886.1270012726685"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CodingOrSchoolProjectsIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "requestSynonym",
+                            "type": "requestSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "projectType",
+                            "type": "projectTypes",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.69996362724.146653532904"
+                            }
+                        },
+                        {
+                            "name": "extraCurricSynonym",
+                            "type": "extraCurricSynonyms",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.69996362724.346583901050"
+                            }
+                        },
+                        {
+                            "name": "programmingType",
+                            "type": "programmingTypes",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.620313621237.1159560862832",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "did you mean to say, contact information?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.620313621237.337272049147",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "did you mean to say, tell me your?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1203458382995.1278901299472",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you mean to say college education, or perhaps high school education?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1203458382995.237150739244",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you mean to say college education, or perhaps high school education?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.210985170679.120642935592",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you mean to say, tell me about your education?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.22023506884.1558306953628",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you mean to say, tell me your skills?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1304469552021.265978496322",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you mean to say, tell me about your work experience?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1085304012886.1270012726685",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you mean to say tell me about your coding projects, or perhaps  pitch your high school activities?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.69996362724.146653532904",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you mean to say pitch me your coding projects, or perhaps tell me about your high school extra curriculars?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.69996362724.346583901050",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you mean to say pitch me your coding projects, or perhaps tell me about your high school extra curriculars?"
+                    }
+                ]
+            }
+        ]
+    }
+}
